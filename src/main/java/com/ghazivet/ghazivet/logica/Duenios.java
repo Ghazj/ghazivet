@@ -19,9 +19,6 @@ public class Duenios {
     private String telefono;
     private String correo;
 
-    /*@ManyToMany
-    private List<Mascotas> mascotas;*/
-
     public Duenios() {
     }
 

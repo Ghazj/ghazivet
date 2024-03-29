@@ -49,22 +49,22 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="nuevoDuenioBtn" pref="109" max="32767" attributes="0"/>
+                                      <Component id="nuevaMascotaBtn" pref="109" max="32767" attributes="0"/>
                                       <Component id="atrasBtn" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="buscarDuenioDocumentoTF" min="-2" pref="167" max="-2" attributes="0"/>
+                                  <Component id="buscarMascotaTF" min="-2" pref="167" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="buscarDuenioBtn" min="-2" pref="97" max="-2" attributes="0"/>
+                                  <Component id="buscarMascotaBtn" min="-2" pref="97" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="mascotasDuenioBtn" min="-2" pref="97" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="editarDuenioBtn" min="-2" pref="97" max="-2" attributes="0"/>
+                                  <Component id="editarMascotaBtn" min="-2" pref="97" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="eliminarDuenioBtn" min="-2" pref="97" max="-2" attributes="0"/>
+                                  <Component id="actualizarListaBtn" min="-2" pref="97" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="48" max="32767" attributes="0"/>
@@ -86,16 +86,16 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="atrasBtn" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="nuevoDuenioBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="nuevaMascotaBtn" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="buscarDuenioDocumentoTF" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="buscarDuenioBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="eliminarDuenioBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="buscarMascotaTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="buscarMascotaBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="actualizarListaBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="mascotasDuenioBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="editarDuenioBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="editarMascotaBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel1" max="32767" attributes="0"/>
@@ -109,23 +109,23 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="36" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="DUE&#xd1;OS"/>
+            <Property name="text" type="java.lang.String" value="MASCOTAS"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="buscarDuenioBtn">
+        <Component class="javax.swing.JButton" name="buscarMascotaBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Buscar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buscarDuenioBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buscarMascotaBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="nuevoDuenioBtn">
+        <Component class="javax.swing.JButton" name="nuevaMascotaBtn">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nuevo"/>
+            <Property name="text" type="java.lang.String" value="Nueva"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nuevoDuenioBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nuevaMascotaBtnActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="atrasBtn">
@@ -136,7 +136,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="atrasBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="buscarDuenioDocumentoTF">
+        <Component class="javax.swing.JTextField" name="buscarMascotaTF">
           <Properties>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
@@ -200,28 +200,28 @@
             </Container>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="eliminarDuenioBtn">
+        <Component class="javax.swing.JButton" name="actualizarListaBtn">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nuevo"/>
+            <Property name="text" type="java.lang.String" value="Actualizar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarDuenioBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="actualizarListaBtnActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="mascotasDuenioBtn">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Mascotas"/>
+            <Property name="text" type="java.lang.String" value="Due&#xf1;o"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mascotasDuenioBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="editarDuenioBtn">
+        <Component class="javax.swing.JButton" name="editarMascotaBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Editar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editarDuenioBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editarMascotaBtnActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

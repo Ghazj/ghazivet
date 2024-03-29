@@ -7,13 +7,15 @@ com\ghazivet\ghazivet\igu\DueniosJFrame.class
 com\ghazivet\ghazivet\igu\NuevoDuenioJFrame$3.class
 com\ghazivet\ghazivet\igu\MascotasDuenioJFrame$1.class
 com\ghazivet\ghazivet\igu\NuevaHistoriaMedicaFrame.class
+com\ghazivet\ghazivet\igu\EditarMascotaJFrame$3.class
 com\ghazivet\ghazivet\igu\DueniosJFrame$3.class
 com\ghazivet\ghazivet\igu\MascotasJFrame$6.class
 com\ghazivet\ghazivet\persistence\exceptions\IllegalOrphanException.class
 com\ghazivet\ghazivet\igu\EditarDuenioJFrame$1.class
-com\ghazivet\ghazivet\igu\MainMenuFrame$4.class
+com\ghazivet\ghazivet\igu\MascotasDuenioJFrame$4.class
 com\ghazivet\ghazivet\igu\NuevaMascotaJFrame.class
 com\ghazivet\ghazivet\logica\Especies.class
+com\ghazivet\ghazivet\igu\EditarMascotaJFrame.class
 com\ghazivet\ghazivet\igu\MainMenuFrame.class
 com\ghazivet\ghazivet\igu\NuevaMascotaJFrame$3.class
 com\ghazivet\ghazivet\igu\MascotasJFrame$4.class
@@ -21,6 +23,7 @@ com\ghazivet\ghazivet\igu\NuevaMascotaJFrame$2.class
 com\ghazivet\ghazivet\logica\Duenios.class
 com\ghazivet\ghazivet\igu\MascotasDuenioJFrame$2.class
 com\ghazivet\ghazivet\persistence\exceptions\PreexistingEntityException.class
+com\ghazivet\ghazivet\igu\MascotasDuenioJFrame$5.class
 com\ghazivet\ghazivet\igu\NuevaHistoriaMedicaFrame$4.class
 com\ghazivet\ghazivet\igu\EditarDuenioJFrame$2.class
 com\ghazivet\ghazivet\logica\Generos_.class
@@ -49,6 +52,7 @@ com\ghazivet\ghazivet\igu\EditarDuenioJFrame$3.class
 com\ghazivet\ghazivet\persistence\EspeciesJpaController.class
 com\ghazivet\ghazivet\igu\MascotasJFrame$1.class
 com\ghazivet\ghazivet\igu\NuevoDuenioJFrame$1.class
+com\ghazivet\ghazivet\igu\EditarMascotaJFrame$1.class
 com\ghazivet\ghazivet\igu\DueniosJFrame$1.class
 com\ghazivet\ghazivet\igu\NuevoDuenioJFrame$2.class
 com\ghazivet\ghazivet\Ghazivet.class
@@ -60,5 +64,7 @@ com\ghazivet\ghazivet\logica\Mascotas_.class
 com\ghazivet\ghazivet\persistence\exceptions\NonexistentEntityException.class
 com\ghazivet\ghazivet\logica\Generos.class
 com\ghazivet\ghazivet\logica\Controller.class
+com\ghazivet\ghazivet\igu\MascotasDuenioJFrame$3.class
+com\ghazivet\ghazivet\igu\EditarMascotaJFrame$2.class
 com\ghazivet\ghazivet\igu\MascotasJFrame$2.class
 com\ghazivet\ghazivet\igu\MascotasJFrame$5.class

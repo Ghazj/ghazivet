@@ -97,7 +97,6 @@ public class DueniosJpaController implements Serializable {
     }
 
     public Duenios find(Object id, Class<Duenios> Duenios) {
-        System.out.println(id);
         EntityManager em = getEntityManager();
         try {
             return em.find(Duenios, id);
@@ -109,7 +108,7 @@ public class DueniosJpaController implements Serializable {
     public List<Duenios> findAll() {
         EntityManager em = getEntityManager();
         try {
-            return em.createQuery("SELECT e FROM Duenios e").getResultList();
+            return em.createQuery("SELECT d FROM Duenios d").getResultList();
         } finally {
             em.close();
         }

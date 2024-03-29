@@ -28,7 +28,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -38,7 +38,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
@@ -48,37 +48,40 @@
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="guardarDuenioBtn" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="limpiarBtn" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel9" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jLabel8" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jLabel7" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="idDuenioLabel" max="32767" attributes="0"/>
+                                  <Component id="jLabel4" pref="103" max="32767" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel9" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel8" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel7" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jLabel2" max="32767" attributes="0"/>
-                                          <Component id="jLabel4" pref="103" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="especieCB" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <Component id="generoCB" alignment="1" min="-2" pref="149" max="-2" attributes="0"/>
-                                      <Component id="colorMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <Component id="nombreMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <Component id="razaMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <Component id="edadMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <Component id="pesoMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="especieCB" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="generoCB" alignment="1" min="-2" pref="149" max="-2" attributes="0"/>
+                              <Component id="colorMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="nombreMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="razaMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="edadMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="pesoMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="358" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="guardarMascotaBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="limpiarBtn" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="364" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="documentoDuenioLabel" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="nombreDuenioLabel" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -97,10 +100,16 @@
                           <Component id="cerrarBtn" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace pref="8" max="32767" attributes="0"/>
+                  <Component id="nombreDuenioLabel" min="-2" pref="16" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="documentoDuenioLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="idDuenioLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="generoCB" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -133,11 +142,11 @@
                       <Component id="pesoMascotaTF" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="guardarDuenioBtn" max="32767" attributes="0"/>
-                      <Component id="limpiarBtn" min="-2" pref="46" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="guardarMascotaBtn" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="limpiarBtn" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -159,9 +168,9 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cerrarBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="idDuenioLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="G&#xe9;nero:"/>
+            <Property name="text" type="java.lang.String" value="ID due&#xf1;o:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -183,23 +192,21 @@
         </Component>
         <Component class="javax.swing.JTextField" name="colorMascotaTF">
         </Component>
-        <Component class="javax.swing.JButton" name="guardarDuenioBtn">
+        <Component class="javax.swing.JButton" name="guardarMascotaBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar Nueva Mascota"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="guardarDuenioBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="guardarMascotaBtnActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="especieCB">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="5">
+              <StringArray count="3">
                 <StringItem index="0" value="-"/>
                 <StringItem index="1" value="Canino"/>
                 <StringItem index="2" value="F&#xe9;lino"/>
-                <StringItem index="3" value="Ave"/>
-                <StringItem index="4" value="Reptil"/>
               </StringArray>
             </Property>
           </Properties>
@@ -249,6 +256,21 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="pesoMascotaTF">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="G&#xe9;nero:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="documentoDuenioLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Documeto due&#xf1;o:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="nombreDuenioLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nombre due&#xf1;o:"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

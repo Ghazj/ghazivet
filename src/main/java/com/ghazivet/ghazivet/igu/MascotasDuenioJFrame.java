@@ -17,7 +17,6 @@ public class MascotasDuenioJFrame extends javax.swing.JFrame {
 
     public MascotasDuenioJFrame(int idDuenio) {
         this.idDuenio = idDuenio;
-
         initComponents();
         cargarDatos(idDuenio);
         cargarTabla(idDuenio);
@@ -37,10 +36,15 @@ public class MascotasDuenioJFrame extends javax.swing.JFrame {
         mascotasTable = new javax.swing.JTable();
         editarMascotaBtn = new javax.swing.JButton();
         nuevaMascotaBtn = new javax.swing.JButton();
+        cerrarBtn = new javax.swing.JButton();
         editarMascotaBtn1 = new javax.swing.JButton();
+        nuevaMascotaBtn1 = new javax.swing.JButton();
+        nuevaMascotaBtn2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 400));
+
+        MascotasDuenioPanel.setPreferredSize(new java.awt.Dimension(600, 400));
 
         nombreApellidoTitleLabel.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         nombreApellidoTitleLabel.setText("ANTONELLA MARTINI.");
@@ -53,27 +57,50 @@ public class MascotasDuenioJFrame extends javax.swing.JFrame {
 
         correoDuenioLabel.setText("Correo:");
 
+        mascotasTable.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         mascotasTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {},
+                {},
+                {},
+                {}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
+        mascotasTable.setCellSelectionEnabled(true);
         jScrollPane1.setViewportView(mascotasTable);
 
         editarMascotaBtn.setText("Editar mascota");
+        editarMascotaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarMascotaBtnActionPerformed(evt);
+            }
+        });
 
         nuevaMascotaBtn.setText("Nueva mascota");
+        nuevaMascotaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nuevaMascotaBtnActionPerformed(evt);
+            }
+        });
+
+        cerrarBtn.setText("Cerrar");
+        cerrarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerrarBtnActionPerformed(evt);
+            }
+        });
 
         editarMascotaBtn1.setText("Editar mascota");
-        editarMascotaBtn1.addActionListener(new java.awt.event.ActionListener() {
+
+        nuevaMascotaBtn1.setText("Vacunas");
+
+        nuevaMascotaBtn2.setText("Historias Medicas");
+        nuevaMascotaBtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editarMascotaBtn1ActionPerformed(evt);
+                nuevaMascotaBtn2ActionPerformed(evt);
             }
         });
 
@@ -83,8 +110,11 @@ public class MascotasDuenioJFrame extends javax.swing.JFrame {
             MascotasDuenioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MascotasDuenioPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(MascotasDuenioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MascotasDuenioPanelLayout.createSequentialGroup()
+                .addGroup(MascotasDuenioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, MascotasDuenioPanelLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
+                    .addGroup(MascotasDuenioPanelLayout.createSequentialGroup()
                         .addGroup(MascotasDuenioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(idDuenioLabel)
                             .addComponent(documentoDuenioLabel))
@@ -93,39 +123,47 @@ public class MascotasDuenioJFrame extends javax.swing.JFrame {
                             .addComponent(telefonoDuenioLabel)
                             .addComponent(correoDuenioLabel))
                         .addGap(198, 198, 198))
-                    .addGroup(MascotasDuenioPanelLayout.createSequentialGroup()
-                        .addGroup(MascotasDuenioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(nuevaMascotaBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nombreApellidoTitleLabel, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MascotasDuenioPanelLayout.createSequentialGroup()
-                        .addComponent(editarMascotaBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, MascotasDuenioPanelLayout.createSequentialGroup()
+                        .addComponent(nombreApellidoTitleLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(editarMascotaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cerrarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(MascotasDuenioPanelLayout.createSequentialGroup()
+                        .addComponent(nuevaMascotaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nuevaMascotaBtn2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nuevaMascotaBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(editarMascotaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(editarMascotaBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
         MascotasDuenioPanelLayout.setVerticalGroup(
             MascotasDuenioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MascotasDuenioPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(nombreApellidoTitleLabel)
+                .addGroup(MascotasDuenioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nombreApellidoTitleLabel)
+                    .addComponent(cerrarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(MascotasDuenioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(idDuenioLabel)
-                    .addComponent(telefonoDuenioLabel))
+                .addGroup(MascotasDuenioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(telefonoDuenioLabel)
+                    .addComponent(idDuenioLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(MascotasDuenioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(documentoDuenioLabel)
                     .addComponent(correoDuenioLabel))
-                .addGap(27, 27, 27)
-                .addComponent(nuevaMascotaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(MascotasDuenioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(editarMascotaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(editarMascotaBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nuevaMascotaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editarMascotaBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nuevaMascotaBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nuevaMascotaBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -133,25 +171,39 @@ public class MascotasDuenioJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(MascotasDuenioPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(MascotasDuenioPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(MascotasDuenioPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(MascotasDuenioPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void editarMascotaBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarMascotaBtn1ActionPerformed
+    private void cerrarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarBtnActionPerformed
+        dispose();
+    }//GEN-LAST:event_cerrarBtnActionPerformed
+
+    private void editarMascotaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarMascotaBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_editarMascotaBtn1ActionPerformed
+    }//GEN-LAST:event_editarMascotaBtnActionPerformed
+
+    private void nuevaMascotaBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevaMascotaBtn2ActionPerformed
+
+    }//GEN-LAST:event_nuevaMascotaBtn2ActionPerformed
+
+    private void nuevaMascotaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevaMascotaBtnActionPerformed
+        NuevaMascotaJFrame NuevaMascotaJFrame = new NuevaMascotaJFrame(idDuenio);
+        NuevaMascotaJFrame.setVisible(true);
+        NuevaMascotaJFrame.setLocationRelativeTo(null);
+    }//GEN-LAST:event_nuevaMascotaBtnActionPerformed
 
     private void cargarDatos(int idDuenio) {
         Duenios Duenio = Controller.getDuenio(idDuenio);
@@ -183,6 +235,7 @@ public class MascotasDuenioJFrame extends javax.swing.JFrame {
         // Recorrer la lista y cargar cada unos de los registros como fila de la tabla.
         if (listaMascotas != null) {
             for (Mascotas mascota : listaMascotas) {
+                System.out.println(mascota.toString());
                 Object[] mascotaObject = {mascota.getId_mascota(), mascota.getNombre(), mascota.getEspecie().getId_especie(), mascota.getGenero().getId_genero(), mascota.getRaza(), mascota.getColor(), mascota.getEdad()};
                 tableModel.addRow(mascotaObject);
             }
@@ -193,6 +246,7 @@ public class MascotasDuenioJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel MascotasDuenioPanel;
+    private javax.swing.JButton cerrarBtn;
     private javax.swing.JLabel correoDuenioLabel;
     private javax.swing.JLabel documentoDuenioLabel;
     private javax.swing.JButton editarMascotaBtn;
@@ -202,6 +256,8 @@ public class MascotasDuenioJFrame extends javax.swing.JFrame {
     private javax.swing.JTable mascotasTable;
     private javax.swing.JLabel nombreApellidoTitleLabel;
     private javax.swing.JButton nuevaMascotaBtn;
+    private javax.swing.JButton nuevaMascotaBtn1;
+    private javax.swing.JButton nuevaMascotaBtn2;
     private javax.swing.JLabel telefonoDuenioLabel;
     // End of variables declaration//GEN-END:variables
 }

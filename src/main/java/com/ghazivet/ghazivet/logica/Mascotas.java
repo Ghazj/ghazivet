@@ -16,13 +16,13 @@ public class Mascotas implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int id_mascota;   
+    private int id_mascota;
     private String nombre;
     private String color;
     private String raza;
     private int edad;
     private int peso;
-    
+
     @ManyToOne
     @JoinColumn(name = "id_duenio")
     private Duenios duenio;
@@ -179,6 +179,4 @@ public class Mascotas implements Serializable {
         return "Mascotas{" + "id_mascota=" + id_mascota + ", nombre=" + nombre + ", color=" + color + ", raza=" + raza + ", edad=" + edad + ", peso=" + peso + ", duenio=" + duenio + ", especie=" + especie + ", genero=" + genero + '}';
     }
 
-    
-    
 }
