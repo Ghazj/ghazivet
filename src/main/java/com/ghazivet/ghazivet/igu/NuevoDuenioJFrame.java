@@ -1,6 +1,7 @@
 package com.ghazivet.ghazivet.igu;
 
 import com.ghazivet.ghazivet.logica.Controller;
+import com.ghazivet.ghazivet.logica.Duenios;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
@@ -163,10 +164,15 @@ public class NuevoDuenioJFrame extends javax.swing.JFrame {
 
     private void guardarDuenioBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarDuenioBtnActionPerformed
         try {
-            Controller.saveDuenio(idDocumentoDuenioTF.getText(), nombreDuenioTF.getText(), apellidoDuenioTF.getText(), telefonoDuenioTF.getText(), correoDuenioTF.getText());
+            Duenios Duenio = Controller.saveDuenio(idDocumentoDuenioTF.getText(), nombreDuenioTF.getText(), apellidoDuenioTF.getText(), telefonoDuenioTF.getText(), correoDuenioTF.getText());
             optionPane("Dueño guardado correctamente.", "Guardado exitoso", "Info");
+            NuevaMascotaJFrame NuevaMascotaJFrame = new NuevaMascotaJFrame(Duenio.getId_duenio());
+            NuevaMascotaJFrame.setVisible(true);
+            NuevaMascotaJFrame.setLocationRelativeTo(null);
+            
             dispose();
         } catch (Exception e) {
+            e.printStackTrace();
             optionPane("Error al guardar nuevo dueño.", "Error", "Error");
         }
     }//GEN-LAST:event_guardarDuenioBtnActionPerformed

@@ -19,6 +19,7 @@ com\ghazivet\ghazivet\igu\EditarMascotaJFrame.class
 com\ghazivet\ghazivet\igu\MainMenuFrame.class
 com\ghazivet\ghazivet\igu\NuevaMascotaJFrame$3.class
 com\ghazivet\ghazivet\igu\MascotasJFrame$4.class
+com\ghazivet\ghazivet\igu\CalendarFrame$1.class
 com\ghazivet\ghazivet\igu\NuevaMascotaJFrame$2.class
 com\ghazivet\ghazivet\logica\Duenios.class
 com\ghazivet\ghazivet\igu\MascotasDuenioJFrame$2.class
@@ -27,6 +28,7 @@ com\ghazivet\ghazivet\igu\MascotasDuenioJFrame$5.class
 com\ghazivet\ghazivet\igu\NuevaHistoriaMedicaFrame$4.class
 com\ghazivet\ghazivet\igu\EditarDuenioJFrame$2.class
 com\ghazivet\ghazivet\logica\Generos_.class
+com\ghazivet\ghazivet\igu\CalendarFrame.class
 com\ghazivet\ghazivet\igu\NuevaHistoriaMedicaFrame$1.class
 com\ghazivet\ghazivet\igu\MascotasJFrame$7.class
 com\ghazivet\ghazivet\igu\DueniosJFrame$2.class
@@ -41,13 +43,11 @@ com\ghazivet\ghazivet\igu\DueniosJFrame$8.class
 com\ghazivet\ghazivet\logica\Mascotas.class
 com\ghazivet\ghazivet\igu\MascotasDuenioJFrame.class
 com\ghazivet\ghazivet\igu\NuevaMascotaJFrame$1.class
-com\ghazivet\ghazivet\logica\DueniosPK.class
 com\ghazivet\ghazivet\logica\Especies_.class
 com\ghazivet\ghazivet\igu\DueniosJFrame$4.class
 com\ghazivet\ghazivet\logica\Duenios_.class
 com\ghazivet\ghazivet\igu\NuevaHistoriaMedicaFrame$5.class
 com\ghazivet\ghazivet\igu\NuevaHistoriaMedicaFrame$2.class
-com\ghazivet\ghazivet\logica\DueniosPK_.class
 com\ghazivet\ghazivet\igu\EditarDuenioJFrame$3.class
 com\ghazivet\ghazivet\persistence\EspeciesJpaController.class
 com\ghazivet\ghazivet\igu\MascotasJFrame$1.class

@@ -1,6 +1,7 @@
 package com.ghazivet.ghazivet.logica;
 
 import com.ghazivet.ghazivet.persistence.PersistenceController;
+import java.util.Date;
 import java.util.List;
 
 public class Controller {
@@ -10,11 +11,12 @@ public class Controller {
     public Controller() {
     }
 
-    public void saveDuenio(String idDocumentoDuenio, String nombreDuenio, String apellidoDuenio, String telefonoDuenio, String correoDuenio) {
+    public Duenios saveDuenio(String idDocumentoDuenio, String nombreDuenio, String apellidoDuenio, String telefonoDuenio, String correoDuenio) {
         int documentoDuenioInt = Integer.parseInt(idDocumentoDuenio);
 
         Duenios Duenio = new Duenios(documentoDuenioInt, nombreDuenio, apellidoDuenio, telefonoDuenio, correoDuenio);
         PersistenceController.saveDuenio(Duenio);
+        return Duenio;
     }
 
     public Duenios getDuenio(int idDuenio) {
@@ -42,10 +44,7 @@ public class Controller {
         return PersistenceController.getMascotasDuenio(idDuenio);
     }
 
-    public void saveMascota(int idDuenio, int idEspecie, int idGenero, String nombre, String color, String raza, String edad, String peso) {
-        int edadMascota = Integer.parseInt(edad);
-        int pesoMascota = Integer.parseInt(peso);
-
+    public void saveMascota(int idDuenio, int idEspecie, int idGenero, String nombre, String color, String raza, Date edad) {
         Duenios Duenio = getDuenio(idDuenio);
         Especies especieMascota = getEspecie(idEspecie);
         Generos generoMascota = getGenero(idGenero);
@@ -58,8 +57,7 @@ public class Controller {
         Mascota.setNombre(nombre);
         Mascota.setColor(color);
         Mascota.setRaza(raza);
-        Mascota.setEdad(edadMascota);
-        Mascota.setPeso(pesoMascota);
+        Mascota.setEdad(edad);
 
         PersistenceController.saveMascota(Mascota);
     }

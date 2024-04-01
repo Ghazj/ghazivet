@@ -1,12 +1,11 @@
 package com.ghazivet.ghazivet.logica;
 
-import java.util.List;
+import java.sql.Timestamp;
 import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 
 @Entity
 public class Duenios {
@@ -18,6 +17,8 @@ public class Duenios {
     private String apellido;
     private String telefono;
     private String correo;
+    private Timestamp fecha_creacion;
+    private Timestamp fecha_actualizacion;
 
     public Duenios() {
     }

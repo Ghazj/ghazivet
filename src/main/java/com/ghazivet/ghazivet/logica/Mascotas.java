@@ -1,14 +1,14 @@
 package com.ghazivet.ghazivet.logica;
 
 import java.io.Serializable;
-import java.util.List;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -20,8 +20,9 @@ public class Mascotas implements Serializable {
     private String nombre;
     private String color;
     private String raza;
-    private int edad;
-    private int peso;
+    private Date edad;
+    private Timestamp fecha_creacion;
+    private Timestamp fecha_actualizacion;
 
     @ManyToOne
     @JoinColumn(name = "id_duenio")
@@ -36,13 +37,14 @@ public class Mascotas implements Serializable {
     public Mascotas() {
     }
 
-    public Mascotas(int id_mascota, String nombre, String color, String raza, int edad, int peso, Duenios duenio, Especies especie, Generos genero) {
+    public Mascotas(int id_mascota, String nombre, String color, String raza, Date edad, Timestamp fecha_creacion, Timestamp fecha_actualizacion, Duenios duenio, Especies especie, Generos genero) {
         this.id_mascota = id_mascota;
         this.nombre = nombre;
         this.color = color;
         this.raza = raza;
         this.edad = edad;
-        this.peso = peso;
+        this.fecha_creacion = fecha_creacion;
+        this.fecha_actualizacion = fecha_actualizacion;
         this.duenio = duenio;
         this.especie = especie;
         this.genero = genero;
@@ -80,20 +82,28 @@ public class Mascotas implements Serializable {
         this.raza = raza;
     }
 
-    public int getEdad() {
+    public Date getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(Date edad) {
         this.edad = edad;
     }
 
-    public int getPeso() {
-        return peso;
+    public Timestamp getFecha_creacion() {
+        return fecha_creacion;
     }
 
-    public void setPeso(int peso) {
-        this.peso = peso;
+    public void setFecha_creacion(Timestamp fecha_creacion) {
+        this.fecha_creacion = fecha_creacion;
+    }
+
+    public Timestamp getFecha_actualizacion() {
+        return fecha_actualizacion;
+    }
+
+    public void setFecha_actualizacion(Timestamp fecha_actualizacion) {
+        this.fecha_actualizacion = fecha_actualizacion;
     }
 
     public Duenios getDuenio() {
@@ -123,15 +133,16 @@ public class Mascotas implements Serializable {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 29 * hash + this.id_mascota;
-        hash = 29 * hash + Objects.hashCode(this.nombre);
-        hash = 29 * hash + Objects.hashCode(this.color);
-        hash = 29 * hash + Objects.hashCode(this.raza);
-        hash = 29 * hash + this.edad;
-        hash = 29 * hash + this.peso;
-        hash = 29 * hash + Objects.hashCode(this.duenio);
-        hash = 29 * hash + Objects.hashCode(this.especie);
-        hash = 29 * hash + Objects.hashCode(this.genero);
+        hash = 83 * hash + this.id_mascota;
+        hash = 83 * hash + Objects.hashCode(this.nombre);
+        hash = 83 * hash + Objects.hashCode(this.color);
+        hash = 83 * hash + Objects.hashCode(this.raza);
+        hash = 83 * hash + Objects.hashCode(this.edad);
+        hash = 83 * hash + Objects.hashCode(this.fecha_creacion);
+        hash = 83 * hash + Objects.hashCode(this.fecha_actualizacion);
+        hash = 83 * hash + Objects.hashCode(this.duenio);
+        hash = 83 * hash + Objects.hashCode(this.especie);
+        hash = 83 * hash + Objects.hashCode(this.genero);
         return hash;
     }
 
@@ -150,12 +161,6 @@ public class Mascotas implements Serializable {
         if (this.id_mascota != other.id_mascota) {
             return false;
         }
-        if (this.edad != other.edad) {
-            return false;
-        }
-        if (this.peso != other.peso) {
-            return false;
-        }
         if (!Objects.equals(this.nombre, other.nombre)) {
             return false;
         }
@@ -163,6 +168,15 @@ public class Mascotas implements Serializable {
             return false;
         }
         if (!Objects.equals(this.raza, other.raza)) {
+            return false;
+        }
+        if (!Objects.equals(this.edad, other.edad)) {
+            return false;
+        }
+        if (!Objects.equals(this.fecha_creacion, other.fecha_creacion)) {
+            return false;
+        }
+        if (!Objects.equals(this.fecha_actualizacion, other.fecha_actualizacion)) {
             return false;
         }
         if (!Objects.equals(this.duenio, other.duenio)) {
@@ -176,7 +190,6 @@ public class Mascotas implements Serializable {
 
     @Override
     public String toString() {
-        return "Mascotas{" + "id_mascota=" + id_mascota + ", nombre=" + nombre + ", color=" + color + ", raza=" + raza + ", edad=" + edad + ", peso=" + peso + ", duenio=" + duenio + ", especie=" + especie + ", genero=" + genero + '}';
+        return "Mascotas{" + "id_mascota=" + id_mascota + ", nombre=" + nombre + ", color=" + color + ", raza=" + raza + ", edad=" + edad + ", fecha_creacion=" + fecha_creacion + ", fecha_actualizacion=" + fecha_actualizacion + ", duenio=" + duenio + ", especie=" + especie + ", genero=" + genero + '}';
     }
-
 }

@@ -99,9 +99,7 @@ public class MainMenuFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_mascotasBtn1ActionPerformed
 
     private void mascotasBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mascotasBtnActionPerformed
-        MascotasDuenioJFrame MascotasJFrame = new MascotasDuenioJFrame();
-        MascotasJFrame.setVisible(true);
-        MascotasJFrame.setLocationRelativeTo(null);
+        
     }//GEN-LAST:event_mascotasBtnActionPerformed
 
     private void dueniosBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dueniosBtnActionPerformed

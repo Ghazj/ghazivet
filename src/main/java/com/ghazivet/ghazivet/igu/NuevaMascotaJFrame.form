@@ -47,9 +47,19 @@
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="guardarMascotaBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="limpiarBtn" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="364" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="documentoDuenioLabel" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="nombreDuenioLabel" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel9" alignment="1" max="32767" attributes="0"/>
                               <Component id="jLabel8" alignment="1" max="32767" attributes="0"/>
                               <Component id="jLabel7" alignment="1" max="32767" attributes="0"/>
                               <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
@@ -62,26 +72,16 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="especieCB" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="especieCB" pref="150" max="32767" attributes="0"/>
+                                  <Component id="colorMascotaTF" pref="150" max="32767" attributes="0"/>
+                                  <Component id="nombreMascotaTF" pref="150" max="32767" attributes="0"/>
+                                  <Component id="razaMascotaTF" pref="150" max="32767" attributes="0"/>
+                                  <Component id="jDateChooser" max="32767" attributes="0"/>
+                              </Group>
                               <Component id="generoCB" alignment="1" min="-2" pref="149" max="-2" attributes="0"/>
-                              <Component id="colorMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                              <Component id="nombreMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                              <Component id="razaMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                              <Component id="edadMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                              <Component id="pesoMascotaTF" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="358" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="guardarMascotaBtn" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="limpiarBtn" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="364" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="documentoDuenioLabel" alignment="0" max="32767" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="nombreDuenioLabel" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -100,7 +100,7 @@
                           <Component id="cerrarBtn" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="8" max="32767" attributes="0"/>
+                  <EmptySpace pref="14" max="32767" attributes="0"/>
                   <Component id="nombreDuenioLabel" min="-2" pref="16" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="documentoDuenioLabel" min="-2" max="-2" attributes="0"/>
@@ -127,21 +127,16 @@
                       <Component id="colorMascotaTF" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="razaMascotaTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                      <Component id="razaMascotaTF" min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="edadMascotaTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                      <Component id="jDateChooser" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="pesoMascotaTF" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="guardarMascotaBtn" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                       <Component id="limpiarBtn" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
@@ -203,10 +198,12 @@
         <Component class="javax.swing.JComboBox" name="especieCB">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
+              <StringArray count="5">
                 <StringItem index="0" value="-"/>
                 <StringItem index="1" value="Canino"/>
                 <StringItem index="2" value="F&#xe9;lino"/>
+                <StringItem index="3" value="Ave"/>
+                <StringItem index="4" value="Reptil"/>
               </StringArray>
             </Property>
           </Properties>
@@ -248,15 +245,6 @@
             <Property name="text" type="java.lang.String" value="Edad"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="edadMascotaTF">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Peso"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="pesoMascotaTF">
-        </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="text" type="java.lang.String" value="G&#xe9;nero:"/>
@@ -271,6 +259,8 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre due&#xf1;o:"/>
           </Properties>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser">
         </Component>
       </SubComponents>
     </Container>
